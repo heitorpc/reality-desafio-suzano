@@ -1,0 +1,19 @@
+Desafio: Tornar a página acessível
+
+Padrões de acessibilidade:
+- MDN
+- W3C
+
+O que fazer:
+
+Dark Mode: 
+Transcrição de imagens: x
+Keyboards Inputs: x
+Troca de cores: x
+Tags semânticas: x
+Alto contraste: x
+Focos e estilos no links: x 
+
+Testes de acessibilidade:
+WEB
+Google lite house
