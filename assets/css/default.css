@@ -1,15 +1,29 @@
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
+:root {
+	--bg: #f9f9f9;
+	--header-bg: #f9f9f9;
+	--link-color: #1f1534;
+	--text-color: black;
+	--span-color: #4089ed;
+	--border-color: #e5e9f6;
+	--gradient: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
+	--diversity-button-color: #4089ed;
+	--footer-bg: #ededed;
+	--footer-title: #484848
+}
+
+
 html,
 body {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	background-color: #f9f9f9;
+	background-color: var(--bg);
+	color: var(--text-color);
 	font-family: "Mulish", sans-serif;
 	font-style: normal;
 	font-weight: normal;
-
 }
 
 img:hover {
@@ -28,7 +42,6 @@ img:hover {
 }
 
 .header-block::after,
-.commitments-block::after,
 .goals-block::after,
 .diversity-block::after,
 .diversity-policy-block::after,
@@ -40,8 +53,10 @@ img:hover {
 
 /* Header */
 .header-block {
+	width: 800px;
+	background-color: var(--header-bg);
+	color: var(--link-color);
 	display: block;
-	margin-top: 20pt;
 }
 
 .header-block div:first-child {
@@ -69,7 +84,7 @@ img:hover {
 }
 
 .header-block nav ul li a {
-	color: #1f1534;
+	color: var(--link-color);
 	text-decoration: none;
 }
 
@@ -80,6 +95,8 @@ img:hover {
 /* Diversity */
 
 .diversity-block {
+	background-color: white;
+	color: black;
 	grid-template-columns: repeat(2, 2fr);
 	grid-auto-rows: minmax(50px, auto);
 	grid-column-gap: 4em;
@@ -100,17 +117,19 @@ img:hover {
 	font-size: 25pt;
 	line-height: 30pt;
 	margin-top: 80pt;
+	margin-left: 0.5em;
 }
 
 .diversity-block .diversity-h1 span {
-	color: #63b1fc;
+	color: var(--span-color);
 }
 
 .diversity-block .diversity-text {
 	font-weight: 300;
 	font-size: 12pt;
 	line-height: 16pt;
-	color: #000;
+	color: black;
+	margin-left: 1em;
 }
 
 .diversity-block::after {
@@ -121,11 +140,15 @@ img:hover {
 
 /* Commitments */
 .commitments-block {
+	margin: auto;
 	grid-template-columns: repeat(2, 2fr);
 	grid-auto-rows: minmax(50px, auto);
 	grid-column-gap: 1em;
 	grid-row-gap: 1em;
 }
+
+
+
 
 .commitments-block img {
 	display: block;
@@ -150,10 +173,11 @@ img:hover {
 .commitment-2,
 .commitment-3,
 .commitment-4 {
-	border: 1px solid #e5e9f6;
+	border: 1px solid var(--border-color);
 	border-radius: 20px;
 	padding: 1em;
 	background-color: #ffffff;
+	color: black;
 }
 
 .commitment-1 {
@@ -190,10 +214,14 @@ img:hover {
 
 /* Goals */
 .goals-block {
+	background-color: white;
+	color: black;
 	grid-template-columns: repeat(2, 2fr);
 	grid-auto-rows: minmax(50px, auto);
 	grid-column-gap: 1em;
 	grid-row-gap: 1em;
+	margin-bottom: 4rem;
+	border-radius: 24px;
 }
 
 .goals-block img {
@@ -201,6 +229,8 @@ img:hover {
 }
 
 .goal-text {
+	background-color: var(--bg);
+	color: var(--text-color);
 	grid-column-start: 1;
 	grid-column-end: 3;
 	text-align: center;
@@ -209,10 +239,11 @@ img:hover {
 }
 
 .goals-block span {
-	color: #63b1fc;
+	color: var(--span-color);
 }
 
 .goal-1 {
+	border-radius: 0px 24px 24px 0px;
 	display: grid;
 	grid-column-start: 1;
 	grid-column-end: 3;
@@ -249,7 +280,7 @@ img:hover {
 /* Diversity Policy */
 .diversity-policy-block {
 	grid-template-columns: repeat(2, 2fr);
-	background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
+	background: var(--gradient);
 	border-radius: 24px;
 }
 
@@ -267,13 +298,13 @@ img:hover {
 .diversity-policy-text button {
 	margin-top: 20pt;
 	padding: 10pt 20pt;
-	border: 1px solid #4089ed;
+	border: 1px solid var(--diversity-button-color);
 	border-radius: 55px;
-	color: #4089ed;
+	color: var(--diversity-button-color);
 }
 
 .diversity-policy-text button:hover {
-    background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
+    background: var(--gradient);
     color: white;
     font-weight: 500;
 }
@@ -285,10 +316,12 @@ img:hover {
 }
 
 .collaborators-block img {
-	width: 190pt;
+	width: 100%;
 }
 
 .collaborators-block h1 {
+	color: black;
+	text-align: center;
 	font-size: 14pt;
 	margin-bottom: 4pt;
 	padding-left: 10pt;
@@ -309,20 +342,20 @@ img:hover {
 .collaborators-block a {
 	padding-left: 10pt;
 	text-decoration: none;
-	color: #4089ed;
+	color: var(--diversity-button-color);
 }
 
 .collaborators-block button {
 	margin-top: 20pt;
 	padding: 8pt 50pt;
-	border: 1px solid #4089ed;
+	border: 1px solid var(--diversity-button-color);
 	border-radius: 55px;
 	background-color: #e5e5e5;
-	color: #4089ed;
+	color: var(--diversity-button-color);
 }
 
 .collaborators-block button:hover {
-    background-color: #4089ed;
+    background-color: var(--diversity-button-color);
     color: #fff;
     font-weight: bold;
 }
@@ -375,12 +408,13 @@ img:hover {
 	right: 0;
 	height: auto;
 	width: 100%;
-	background-color: #ededed;
+	background-color: var(--footer-bg);
 	position: absolute;
 	display: grid;
-	grid-template-columns: 0.3fr 1fr;
+	grid-template-columns: 0.3fr 0.5fr 0.8fr;
 	padding-bottom: 2rem;
 }
+
 
 .foot-block-1 {
 	padding: 5rem 3rem;
@@ -388,6 +422,33 @@ img:hover {
 
 .foot-block-2 {
 	padding: 5rem 3rem;
+}
+
+.foot-block-2 .toggle {
+	justify-content: center;
+	margin-top: 3rem;
+}
+
+.foot-block-3 {
+	padding: 5rem 1rem;
+}
+
+.footer-block div:first-child p:last-child {
+	position: absolute;
+	padding-top: 8rem;
+}
+
+.footer-block div:last-child p:first-child {
+	font-weight: 700;
+	font-size: 12pt;
+	color: var(--footer-title);
+	text-align: left;
+}
+
+.footer-block div:last-child {
+	display: flex;
+	flex-wrap: wrap;
+	justify-self: right;
 }
 
 .foot-block-1 ul {
@@ -405,7 +466,7 @@ img:hover {
 }
 
 .footer-block div ul li a {
-	color: #1f1534;
+	color: var(--link-color);
 	text-decoration: none;
 }
 
@@ -423,24 +484,6 @@ img:hover {
 	margin-top: 2rem;
 }
 
-.footer-block div:first-child p:last-child {
-	position: absolute;
-	padding-top: 8rem;
-}
-
-.footer-block div:last-child p:first-child {
-	font-weight: 700;
-	font-size: 12pt;
-	color: #484848;
-	text-align: left;
-}
-
-.footer-block div:last-child {
-	display: flex;
-	flex-wrap: wrap;
-	justify-self: right;
-}
-
 .foot-1 {
 	display: block;
 	width: min-content;
@@ -455,4 +498,46 @@ img:hover {
 	display: block;
 	width: min-content;
 	margin-right: 5rem;
+}
+
+input[type=checkbox] {
+	height: 0;
+	width: 0;
+	visibility: hidden;
+}
+
+label {
+	cursor: pointer;
+	text-indent: -9999px;
+	width: 52px;
+	height: 27px;
+	background-color: grey;
+	float: right;
+	border-radius: 100px;
+	position: relative;
+}
+
+label::after {
+	content: '';
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	width: 20px;
+	height: 20px;
+	background-color: white;
+	border-radius: 90px;
+	transition: 0.3s;
+}
+
+input:checked + label {
+	background-color: #0077ff;
+}
+
+input:checked + label::after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
+}
+
+label:active::after {
+	width: 45px;
 }
